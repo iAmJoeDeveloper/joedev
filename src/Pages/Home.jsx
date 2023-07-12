@@ -1,3 +1,4 @@
+import { BrowserRouter, Link } from 'react-router-dom'
 import { FaLinkedin, FaInstagram, FaFolder, FaFolderOpen, FaFileDownload } from 'react-icons/fa'
 import { images } from '../techlogos.js'
 
@@ -11,7 +12,7 @@ const Home = () => {
 					<small>Portfolio</small>
 				</div>
 				<div className='group p-10 flex flex-col justify-center items-center cursor-pointer'>
-					<FaFileDownload className='text-[#FFE100] text-4xl mb-1 group-hover:text-[#FF7000]' />
+					<FaFileDownload className='text-[#FFE100] text-4xl mb-1' />
 					<small>Download CV</small>
 				</div>
 			</div>
@@ -28,12 +29,14 @@ const Home = () => {
 					<p className='font-sans text-white'>Frontend Developer</p>
 					{/* Social Media */}
 					<div className='group flex p-2'>
-						<a href='#' className='pr-2 cursor-pointer'>
-							<FaLinkedin className='text-white text-3xl' />
-						</a>
-						<a href='#' className='cursor-pointer'>
-							<FaInstagram className='text-white text-3xl' />
-						</a>
+						<BrowserRouter>
+							<Link to='https://www.linkedin.com/in/joe-dev/' target='_blank' className='pr-2 '>
+								<FaLinkedin className='text-white text-3xl hover:text-[28px] hover:text-[#FFE100]' />
+							</Link>
+							<Link to='https://www.instagram.com/joedev.js/' target='_blank' className='pr-2 '>
+								<FaInstagram className='text-white text-3xl hover:text-[28px] hover:text-[#FFE100]' />
+							</Link>
+						</BrowserRouter>
 					</div>
 				</div>
 				{/* Gallery */}
