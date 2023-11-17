@@ -1,4 +1,5 @@
 import { Home } from './Pages/Home'
+import { motion } from 'framer-motion'
 
 function App() {
 	return (
@@ -9,7 +10,6 @@ function App() {
 					alt=''
 					className='w-full h-full bg-cover bg-center absolute opacity-10 -z-10'
 				/>
-
 				<Home className='z-0' />
 			</div>
 		</>
